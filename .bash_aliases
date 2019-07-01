@@ -1,0 +1,5 @@
+alias lsa='ls -a'
+alias home='cd ~'
+alias bashrc='vim ~/.bashrc'
+alias purgeimages='docker rmi -f $(docker images -a -q)'
+alias purgecontainers='docker rm -f $(docker ps -a -q)'
