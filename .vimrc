@@ -33,6 +33,9 @@ call plug#begin('~/.vim/plugged')
  Plug 'slashmili/alchemist.vim'
  Plug 'jparise/vim-graphql'
 
+ " Linting
+ Plug 'w0rp/ale'
+
  "AUTOCOMPLETE
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  " :CocInstall coc-json
@@ -125,3 +128,23 @@ au BufRead,BufNewFile *.exs set filetype=elixir
 let g:airline_theme='onedark'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#ale#enabled = 1
+
+" ALE SETUP -- ELIXIR
+let g:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'javascript': ['prettier', 'eslint'],
+      \ 'javascript.jsx': ['stylelint', 'prettier','eslint'],
+      \ 'jsx': ['stylelint', 'prettier', 'eslint'],
+      \ 'typescript': ['prettier', 'eslint'],
+      \ 'ts': ['stylelint', 'prettier', 'eslint'],
+      \ 'tsx': ['stylelint', 'prettier', 'eslint'],
+      \ 'elixir': ['mix_format'],
+      \ 'exs': ['mix_format']
+      \ }
+
+let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+" USED until VIM gtk bug fixed -- cursor dissapears
+" let g:ale_echo_cursor = 0
