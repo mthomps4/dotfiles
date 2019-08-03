@@ -1,3 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "graphql"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "graphql", "elixir", "python"],
+  "eslint.autoFix": true,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
 }
