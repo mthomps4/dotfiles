@@ -13,6 +13,12 @@ call plug#begin('~/.vim/plugged')
  " color scheme
  Plug 'https://github.com/joshdick/onedark.vim'
 
+ "Nerd Tree
+ Plug 'scrooloose/nerdtree'
+
+ " Toggle full pane
+ Plug 'szw/vim-maximizer'
+
  " linter
  Plug 'w0rp/ale'
 
@@ -28,30 +34,19 @@ call plug#begin('~/.vim/plugged')
  Plug 'MaxMEllon/vim-jsx-pretty'
  Plug 'avdgaag/vim-phoenix'
  Plug 'slashmili/alchemist.vim'
+ Plug 'jparise/vim-graphql'
 
- " Deoplete Setup - Requires Python 3
- " pip3 install --user pynvim
- if has('python3')
-  if has('nvim')
-   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-   Plug 'Shougo/deoplete.nvim'
-   Plug 'roxma/nvim-yarp'
-   Plug 'roxma/vim-hug-neovim-rpc'
-  endif
- else
-  echo 'python3 required for deoplete'
-endif
-" Pair with Deoplete Later
-" https://www.gregjs.com/vim/2016/configuring-the-deoplete-asynchronous-keyword-completion-plugin-with-tern-for-vim/
- " Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-
+ "AUTOCOMPLETE
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
 " Mirror Terminator Split Commands
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-o': 'split',
   \ 'ctrl-e': 'vsplit' }
+" Mirror Terminator toggle full screen
+nnoremap <silent><C-x> :MaximizerToggle<cr>
 
 "ONE DARK THEME 24-bit Code
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -65,6 +60,7 @@ if (empty($TMUX))
 endif
 
 " ONE DARK OPTIONS - set before colorscheme
+let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 let g:onedark_color_overrides = {
 \ "black": {"gui": "#000000", "cterm": "0", "cterm16": "0" },
@@ -73,6 +69,9 @@ let g:onedark_color_overrides = {
 
 syntax on
 colorscheme onedark
+
+" Show dotfiles
+let NERDTreeShowHidden=1
 
 " General Config
 scriptencoding utf-8
@@ -106,6 +105,7 @@ map <c-p> <esc>:FZF<cr>
 " Move Lines
 map <c-Down> <esc>:m+1<cr>
 map <c-Up> <esc>:m-2<cr>
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " tmp file location for swp
 if isdirectory($HOME . '/.vim-swap') == 0
@@ -116,27 +116,7 @@ set directory=~/.vim-swap/
 " Set syntax for exs files
 au BufRead,BufNewFile *.exs set filetype=elixir
 
-" let g:deoplete#enable_at_startup=1
-let g:deoplete#enable_at_startup = 1
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-" Use ALE as completion sources for all code.
-call deoplete#custom#option('sources', {
-\ '_': ['ale'],
-\})
-
-"You can disable deoplete in specific languages like this:
-" autocmd FileType c,cpp
-" \ call deoplete#custom#buffer_option('auto_complete', v:false)
-
 " ALE LINTER SETUP
-
-" Enable completion where available.
-" This setting must be set before ALE is loaded.
-"
-" You should not turn this setting on if you wish to use ALE as a completion
-" source for other completion plugins, like Deoplete.
-" let g:ale_completion_enabled = 1
 
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -162,7 +142,7 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nmap <silent> <C-i> <esc>:ALEDetail<cr>
 
-" listing errors
+" Options for listing errors
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
 " let g:ale_open_list = 1
@@ -172,11 +152,9 @@ nmap <silent> <C-i> <esc>:ALEDetail<cr>
 " let g:ale_list_window_size = 4
 " let g:ale_echo_cursor = 1
 
-
 " AIRLINE STATUS BAR INTEGRATIONS
 let g:airline_theme='onedark'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-" let g:airline_statusline_ontop=1
 let g:airline#extensions#ale#enabled = 1
 
 " Allows Elixir Recompile and Nodemon observe file changes with timeout
