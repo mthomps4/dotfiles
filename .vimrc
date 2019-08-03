@@ -38,6 +38,12 @@ call plug#begin('~/.vim/plugged')
 
  "AUTOCOMPLETE
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ " https://github.com/neoclide/coc-tsserver
+ " :CocInstall coc-tsserver json
+ " https://github.com/amiralies/coc-elixir
+ " :CocInstall coc-elixir
+ " https://github.com/neoclide/coc-python
+ " :CocInstall coc-python
 call plug#end()
 
 " Mirror Terminator Split Commands
@@ -117,7 +123,14 @@ set directory=~/.vim-swap/
 au BufRead,BufNewFile *.exs set filetype=elixir
 
 " ALE LINTER SETUP
+" Enable completion where available.
+" This setting must be set before ALE is loaded.
+"
+" You should not turn this setting on if you wish to use ALE as a completion
+" source for other completion plugins, like Deoplete.
+" let g:ale_completion_enabled = 1
 
+let g:ale_elixir_elixir_ls_release = '$HOME/Code/language-servers/elixir/rel'
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ 'javascript': ['prettier', 'eslint'],
