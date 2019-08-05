@@ -147,4 +147,6 @@ let g:ale_sign_column_always = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 " USED until VIM gtk bug fixed -- cursor dissapears
-" let g:ale_echo_cursor = 0
+let g:ale_echo_cursor = 0
+let g:ale_list_window_size=5
+let g:ale_cursor_detail = 1
