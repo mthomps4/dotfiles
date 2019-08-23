@@ -24,18 +24,18 @@ COC Eslint Prettier Options set in [/.vim/coc-settings.json](/.vim/coc-settings.
 
 
 COC Links:
-- [COC]("https://github.com/neoclide/coc.nvim")
-- [COC-Elxir]("https://github.com/amiralies/coc-elixir")
-- [COC-Typescript]("https://github.com/neoclide/coc-tsserver")
-- [COC-Prettier]("https://github.com/neoclide/coc-prettier")
-- [COC-Eslint]("https://github.com/neoclide/coc-eslint")
+- [COC](https://github.com/neoclide/coc.nvim)
+- [COC-Elxir](https://github.com/amiralies/coc-elixir)
+- [COC-Typescript](https://github.com/neoclide/coc-tsserver)
+- [COC-Prettier](https://github.com/neoclide/coc-prettier)
+- [COC-Eslint](https://github.com/neoclide/coc-eslint)
 
 
 
 ### Bashrc
 Standard Ubuntu Setup with some extra helpers for AG SilverSearcher (FZF) and nvmrc help
 
-- [AG SilverSearcher (FZF)]("https://github.com/ggreer/the_silver_searcher")
+- [AG SilverSearcher (FZF)](https://github.com/ggreer/the_silver_searcher)
 
 ### Bash Aliases
 Rando assortment of things I've found useful before.
