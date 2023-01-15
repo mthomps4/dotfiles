@@ -48,6 +48,9 @@ return packer.startup(function(use)
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
 
+  -- commenting with gc
+  use("numToStr/Comment.nvim")
+
   -- explore
   use("nvim-tree/nvim-tree.lua")
   
@@ -62,7 +65,6 @@ return packer.startup(function(use)
   use("BurntSushi/ripgrep")
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use("sharkdp/fd")
-  use("nvim-treesitter/nvim-treesitter")
   -- Main
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
@@ -76,6 +78,24 @@ return packer.startup(function(use)
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
  
+  -- treesitter configuration
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
+  })
+
+  -- managing and installing lsp servers 
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+
+  -- configuring lsp servers
+  use("neovim/nvim-lspconfig")
+
+  -- configuring specifc lsp servers 
+  --
 
   -- ...end plugins
   if packer_bootstrap then

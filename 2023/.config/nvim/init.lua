@@ -6,4 +6,6 @@ require("devbox.plugins.nvim-tree")
 require("devbox.plugins.lualine")
 require("devbox.plugins.telescope")
 require("devbox.plugins.nvim-cmp")
+require("devbox.plugins.comment")
+require("devbox.plugins.lsp.mason")
 

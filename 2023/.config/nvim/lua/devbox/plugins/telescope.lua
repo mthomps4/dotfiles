@@ -40,10 +40,11 @@ telescope.setup({
     },
     pickers = {
       find_files = {
-        find_command = {"rg", "--files", "--hidden", "--ignore", "-u", "--glob=!**/.git/*", "--glob=!**/node_modules/*", "--glob=!**/.next/*", "--glob=!yarn.lock",},    
+        hidden = true,
+        ignore = true,
+        find_command = {"rg", "--files", "--hidden", "--ignore", "-u", "--glob=!**/.git/*", "--glob=!**/node_modules/*", "--glob=!**/.next/*", "--glob=!yarn.lock"},    
       }
     },
-    extensions = {},
   },
 })
 
