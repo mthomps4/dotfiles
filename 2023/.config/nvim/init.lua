@@ -8,4 +8,6 @@ require("devbox.plugins.telescope")
 require("devbox.plugins.nvim-cmp")
 require("devbox.plugins.comment")
 require("devbox.plugins.lsp.mason")
+require("devbox.plugins.lsp.lspsaga")
+require("devbox.plugins.lsp.lspconfig")
 
