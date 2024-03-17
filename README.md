@@ -1,7 +1,9 @@
 # Matt's Dotfiles
 
-## Welcome 2023
+## Welcome 2024
 I've done this one to may times... so here we go again :)
+At this point I figured I'd start keeping a "historic" view -- while there's over a decade of dotfiles. 
+This repo will have the recent adventures with updated Neovim and whatever adventure lies next. 
 
 ## Uses
 
@@ -13,28 +15,11 @@ In no particular order
 - tmux | ssh
 - asdf
 - ngrok
-- doppler
 - FZF | Telescope
+- Copilot 
 
-## Optional Notes (personal pref)
+For full setups and examples see the README.md in the most recently dated folder [2024](./2024/README.md)
+Overall, I try to keep my setup slim, or at least with minimal "config". 
+The more drop 'n play, the better IMO. 
 
-### Update Telescope to Find Files with personal globs
-One additional setup outside of dotfiles. 
-After Installing Lunarvim and adding the config file. 
-Navigate to `.local/share/lunarvim/lua/lvim/core`
-Update two files: 
 
-### which-key.lua
-Update the ["f"] binding to `find_files` instead of `git_files`
-```lua
-["f"] = { require("telescope.builtin").find_files, "Find File" },
-```
-
-### telescope.lua
-Update the find_file options with a find_command globs
-```lua
-find_command = { "rg", "--files", "--hidden", "--ignore", "-u", "--glob=!**/.git/*", "--glob=!**/node_modules/*", "--glob=!**/.next/*", "--glob=!yarn.lock" },
-
-```
-
-This ensures when you fuzzy find, you find/ignore what you expect. For me this included some files within the .gitignore. So I now explicitly ignore other folders with `--glob`. Overtime, this will probably include build, dist, etc. 
