@@ -1,15 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = true 
+add_newline = true
 palette = "catppuccin_mocha"
 
-
-# right_format = '$all'
+# right_format = "$time"
 # format = '$directory$status$character'
 
 [docker_context]
 disabled=true
 
+[package]
+disabled=true
 
 # https://github.com/catppuccin/starship/blob/main/themes
 
