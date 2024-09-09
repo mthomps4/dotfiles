@@ -1,0 +1,9 @@
+[user]
+  name = Matt Thompson
+  email = matt@echobind.com
+[pull]
+  rebase = false
+[init]
+  defaultBranch = main
+[core]
+	ignorecase = false

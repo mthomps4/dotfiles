@@ -1,25 +1,30 @@
 # Matt's Dotfiles
 
-## Welcome 2024
-I've done this one to may times... so here we go again :)
-At this point I figured I'd start keeping a "historic" view -- while there's over a decade of dotfiles. 
-This repo will have the recent adventures with updated Neovim and whatever adventure lies next. 
+## Welcome
+
+About once a year I try to cleanup and reclaim my dotfiles...
+Only recently did I begin storing some "what did I used to do..." notes
+
+This repo *should* have the recent adventures along with whatever adventure lies next.
 
 ## Uses
 
 In no particular order
 
 - iTerm2 | Windows Termial (WSL)
-- [oh-my-zsh](https://ohmyz.sh/) | [p10k](https://github.com/romkatv/powerlevel10k)
-- [lunarvim](https://www.lunarvim.org/)
-- tmux | ssh
-- asdf
-- ngrok
-- FZF | Telescope
-- Copilot 
+  - [iTermCat](https://github.com/catppuccin/iterm/tree/main)
+- [oh-my-zsh](https://ohmyz.sh/)
+- [starship](https://starship.rs/)
+- [catppuccin](https://github.com/catppuccin/zsh-syntax-highlighting) (Previously Powerline... RIP)
+  - [StarCat](https://github.com/catppuccin/starship)
+- [tmux](https://tmuxcheatsheet.com/how-to-install-tmux/)
+  - [tpm](https://github.com/tmux-plugins/tpm)
+- [asdf version manager](https://tmuxcheatsheet.com/how-to-install-tmux/)
+- [ngrok](https://ngrok.com/)
+- [lazyvim](https://www.lazyvim.org/)
+- [FZF](https://github.com/junegunn/fzf)
 
-For full setups and examples see the README.md in the most recently dated folder [2024](./2024/README.md)
-Overall, I try to keep my setup slim, or at least with minimal "config". 
-The more drop 'n play, the better IMO. 
+Overall, I try to keep my setup slim, or at least with minimal "config".
+LazyVim was "close enough" after a few tweaks -- I try to not over complicate my nvim setup.
 
-
+The more drop 'n play, the better
