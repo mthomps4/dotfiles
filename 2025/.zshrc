@@ -43,3 +43,6 @@ eval "$(fzf --zsh)"
 # Starship theming 
 eval "$(starship init zsh)"
 
+# Git Editor 
+export GIT_EDITOR="nvim"
+export GIT_SEQUENCE_EDITOR="nvim"
