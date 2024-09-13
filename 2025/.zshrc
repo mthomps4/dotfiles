@@ -46,3 +46,5 @@ eval "$(starship init zsh)"
 # Git Editor 
 export GIT_EDITOR="nvim"
 export GIT_SEQUENCE_EDITOR="nvim"
+
+export HOMEBREW_NO_AUTO_UPDATE=1
