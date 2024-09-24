@@ -1,9 +1,9 @@
 [user]
   name = Matt Thompson
-  email = matt@echobind.com
+  email = it@depends.com
 [pull]
   rebase = false
 [init]
   defaultBranch = main
 [core]
-	ignorecase = false
+  ignorecase = false
