@@ -6,7 +6,7 @@ About once a year I try to cleanup and reclaim my dotfiles...
 
 Only recently did I begin storing some "what did I used to do..." notes
 
-This repo *should* have the recent adventures along with whatever adventure lies next.
+This repo _should_ have the recent adventures along with whatever adventure lies next.
 
 ## Uses
 
@@ -26,7 +26,10 @@ In no particular order
 - [FZF](https://github.com/junegunn/fzf)
 
 Overall, I try to keep my setup slim, or at least the installation of.
+The more drop 'n play, the better.
+
+## LazyVim / Nvim
 
 After testing different configs and setups, I landed on a stripped-down version of LazyVim as "close enough".
 
-The more drop 'n play, the better.
+For my nvim config checkout [lazy-vim repo](https://github.com/mthomps4/lazy-vim)
