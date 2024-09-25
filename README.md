@@ -3,6 +3,7 @@
 ## Welcome
 
 About once a year I try to cleanup and reclaim my dotfiles...
+
 Only recently did I begin storing some "what did I used to do..." notes
 
 This repo *should* have the recent adventures along with whatever adventure lies next.
@@ -24,7 +25,8 @@ In no particular order
 - [lazyvim](https://www.lazyvim.org/)
 - [FZF](https://github.com/junegunn/fzf)
 
-Overall, I try to keep my setup slim, or at least with minimal "config".
-LazyVim was "close enough" after a few tweaks -- I try to not over complicate my nvim setup.
+Overall, I try to keep my setup slim, or at least the installation of.
 
-The more drop 'n play, the better
+After testing different configs and setups, I landed on a stripped-down version of LazyVim as "close enough".
+
+The more drop 'n play, the better.
