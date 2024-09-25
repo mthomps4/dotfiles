@@ -18,9 +18,6 @@ alias dockerstop='systemctl stop docker'
 alias dockerstatus='systemctl status docker'
 alias purgeimages='docker rmi -f $(docker images -a -q)'
 alias purgecontainers='docker rm -f $(docker ps -a -q)'
-alias poststatus='systemctl status postgresql'
-alias poststart='systemctl start postgresql'
-alias poststop='systemctl stop postgresql'
 alias masterprune="git branch | grep -v \"master\" | xargs git branch -D"
 alias tools="cat ~/.tool-versions"
 alias grep_3000="lsof -i tcp:3000"
@@ -47,4 +44,5 @@ eval "$(starship init zsh)"
 export GIT_EDITOR="nvim"
 export GIT_SEQUENCE_EDITOR="nvim"
 
+# Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
